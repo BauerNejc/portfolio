@@ -1,0 +1,906 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+span {
+    color: #27ae60;
+}
+
+/*REUSABLE*/
+
+.visible {
+    z-index: 9999;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+
+/**********************
+    HEADER + BACKGROUND
+************************/
+
+body {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.3)), to(rgba(0,0,0,0.3))), url("../img/body-background.jpg");
+    background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("../img/body-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-position-x: 0px;
+}
+
+header {
+    position: absolute;
+    top: 10%;
+    left: 17%;
+}
+
+.ime {
+    text-align: center;
+    color: #efefef;
+    font-family: "Lato", sans-serif;
+    display: block;
+    width: 200px;
+}
+
+.ime h1 {
+    font-size: 38px;
+    font-weight: 300;
+    text-shadow: 0.5px 0.5px 0.5px #000;
+    display: block;
+    width: 200px;
+}
+
+.ime h2 {
+    margin-top: 10px;
+    text-transform: uppercase;
+    font-size: 19px;
+    font-weight: 300;
+    text-shadow: 0.5px 0.5px 0.5px #000;
+    letter-spacing: 0.3px;
+    word-spacing: 0.3px;
+    width: 200px;
+}
+
+.underline {
+    border: 0;
+    height: 3px;
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0)), color-stop(rgba(39, 174, 96, 1)), to(rgba(0, 0, 0, 0)));
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(39, 174, 96, 1), rgba(0, 0, 0, 0));
+    margin: 10px 0;
+    width: 200px;  
+    opacity: 0;
+}
+
+
+
+
+/************************
+    ABOUT ME SECTION
+************************/
+
+.about-me {
+    background: rgba(0, 0, 0, 0.8);
+    color: #efefef;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    overflow: auto;
+    z-index: 9999;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
+.about-me .row {
+    width: 100%;
+}
+
+#overlay-about {
+    position: absolute;
+    left: 16%;
+    top: 8%;
+    width: 70%;
+    font-family: "Lato", sans-serif;
+}
+
+#overlay-about h2 {
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 1px;
+    word-spacing: 0.5px;
+    margin-bottom: 20px;
+}
+
+#overlay-about h2::after {
+    display: block;
+    content: " ";
+    width: 150px;
+    height: 2px;
+    background-color: #27ae60;
+   /* background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), color-stop(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.75)));*/
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75));
+    margin: 20px auto;
+}
+
+#overlay-about p {
+    font-weight: 300;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+}
+
+/**************************
+    ABOUT ME BUTTON
+**************************/
+
+.about-button .btn {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 75%;
+    left: -0.8%;
+    z-index: 10000;
+    background: transparent;
+    border: none;
+    font-size: 15px;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    text-shadow: 0.5px 0.5px 0.5px #000;
+    color: #efefef;
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
+    opacity: 0;
+}
+
+.about-button .btn-danger:active:focus,
+.about-button .btn-danger:active:hover,
+.about-button .btn-danger:focus,
+.about-button .btn-danger:active{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.about-button .btn-danger:hover,
+.about-button .btn-danger:active{
+    color: #27ae60;
+    background: transparent;
+    border: none;
+    -webkit-transition: color 0.5s ease-out;
+    transition: color 0.5s ease-out;
+}
+
+
+
+/********************
+    PROJECTS SECTION
+********************/
+
+.projects {
+    background: rgba(0, 0, 0, 0.8);
+    color: #efefef;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    overflow: auto;
+    overflow-y: scroll; /* has to be scroll, not auto */
+    -webkit-overflow-scrolling: touch;
+}
+
+.projects .row {
+    width: 100%;
+}
+
+.projects h2 {
+    font-family: "Lato", sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 35px;
+    font-weight: 300;
+}
+
+.projects h2::after {
+    display: block;
+    content: " ";
+    width: 150px;
+    height: 2px;
+    margin: 0 auto;
+    margin-top: 10px;
+    background-color: #27ae60;
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), color-stop(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.75)));
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75));
+}
+
+.projects p {
+    font-weight: 300;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    text-align: center;
+    font-size: 14px;
+    margin: 25px 10px;
+}
+
+.overlay-projects {
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    width: 80%;
+    font-family: "Lato", sans-serif;
+    margin-top: 10%;
+    padding: 0;
+}
+
+.overlay-projects img {
+    width: 90%;
+    margin-top: 130px;
+    margin-left: 20px;
+    border-radius: 5px;
+}
+/************************
+    PROJECTS BUTTON
+************************/
+
+.projects-button .btn {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 52%;
+    left: -2.3%;
+    z-index: 10000;
+    background: transparent;
+    border: none;
+    font-size: 15px;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    text-shadow: 0.5px 0.5px 0.5px #000;
+    color: #efefef;
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
+    opacity: 0;
+}
+
+.projects-button .btn-danger:active:focus,
+.projects-button .btn-danger:active:hover,
+.projects-button .btn-danger:focus,
+.projects-button .btn-danger:active{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.projects-button .btn-danger:hover,
+.projects-button .btn-danger:active{
+    color: #27ae60;
+    background: transparent;
+    border: none;
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
+}
+
+
+/*********************
+    SKILLS SECTION
+*********************/
+
+.skills {
+    background: rgba(0, 0, 0, 0.8);
+    color: #efefef;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    overflow: auto;
+    overflow-y: scroll; /* has to be scroll, not auto */
+    -webkit-overflow-scrolling: touch;
+}
+
+.skills .row {
+    width: 100%;
+    margin: 0;
+}
+
+.skills h2 {
+    font-family: "Lato", sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 35px;
+    font-weight: 300;
+}
+
+.skills h2::after {
+    display: block;
+    content: " ";
+    width: 150px;
+    height: 2px;
+    margin: 0 auto;
+    margin-top: 10px;
+    background-color: #27ae60;
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), color-stop(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.75)));
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75));
+}
+
+.skills p {
+    font-weight: 300;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    text-align: center;
+    font-size: 14px;
+    margin: 25px 59px;
+}
+
+.overlay-skills {
+    width: 80%;
+    margin-top: 10%;
+}
+
+.container img {
+    width: 80%;
+    border-radius: 20%;
+    padding: 5%;
+    margin-left: 10%;
+}
+/**********************
+    SKILLS BUTTON
+**********************/
+
+.skills-button .btn {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 31%;
+    left: 0.8%;
+    z-index: 10000;
+    background:transparent;
+    border: none;
+    font-size: 15px;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    text-shadow: 0.5px 0.5px 0.5px #000;
+    color: #efefef;
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
+    opacity: 0;
+}
+
+.skills-button .btn-danger:active:focus,
+.skills-button .btn-danger:active:hover,
+.skills-button .btn-danger:focus,
+.skills-button .btn-danger:active{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.skills-button .btn-danger:hover,
+.skills-button .btn-danger:active{
+    color: #27ae60;
+    background: transparent;
+    border: none;
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
+}
+
+/*********************
+    CONTACT SECTION
+*********************/
+
+.contact {
+    background: rgba(0, 0, 0, 0.8);
+    color: #efefef;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: 0;
+    overflow: auto;
+    overflow-y: scroll; /* has to be scroll, not auto */
+    -webkit-overflow-scrolling: touch;
+}
+
+.contact h2 {
+    font-family: "Lato", sans-serif;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 35px;
+    font-weight: 300;
+}
+
+.contact h2::after {
+    display: block;
+    content: " ";
+    width: 150px;
+    height: 2px;
+    margin: 0 auto;
+    margin-top: 10px;
+    background-color: #27ae60;
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.75)), color-stop(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.75)));
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75));
+}
+
+.contact p {
+    font-weight: 300;
+    letter-spacing: 1px;
+    word-spacing: 1px;
+    text-align: center;
+    font-size: 14px;
+    margin: 25px 59px;
+    line-height: 1.5;
+}
+
+.contact span {
+    color: #27ae60;
+    font-size: 130%;
+}
+
+.mail:hover,
+.mail:active,
+.mail:focus {
+    color: #27ae60;
+}
+
+.overlay-contact {
+    width: 90%;
+    margin-top: 20%;
+    margin-left: 5%;
+}
+/*************************
+    CONTACT BUTTON
+*************************/
+
+.contact-button .btn {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 12%;
+    left: -1.4%;
+    z-index: 10000;
+    background:transparent;
+    border: none;
+    font-size: 15px;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    text-shadow: 0.5px 0.5px 0.5px #000;
+    color: #efefef;
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
+    opacity: 0;
+}
+
+.contact-button .btn-danger:active:focus,
+.contact-button .btn-danger:active:hover,
+.contact-button .btn-danger:focus,
+.contact-button .btn-danger:active{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.contact-button .btn-danger:hover,
+.contact-button .btn-danger:active{
+    color: #27ae60;
+    background: transparent;
+    border: none;
+    -webkit-transition: color 0.5s;
+    transition: color 0.5s;
+}
+/***************************
+    CONTACT SUBMIT BUTTON
+***************************/
+
+.div-btn {
+    text-align: center;
+    margin: 5% 0;
+}
+
+#contact-btn {
+    background-color: transparent;
+    color: #efefef;
+    border: 2px solid #27ae60;
+    text-transform: uppercase;
+    font-family: "lato", sans-serif;
+    letter-spacing: 3px;
+}
+
+#contact-btn:focus {
+    outline: none;
+}
+
+/*change color of form on focus*/
+.form-control:focus {
+  border-color: #27ae60;
+  -webkit-box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.075), 0 0 10px rgba(0, 255, 0, 0.8);
+  box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.075), 0 0 10px rgba(0, 255, 0, 0.8);
+}
+
+
+
+/****************************/
+/****RESPONSIVE DESIGN*******/
+/***************************/
+
+/*Extra small devices, phones*/
+
+@media only screen and (min-width: 480px) {
+
+    header {
+        top: 8%;
+        left: 30%;
+    }
+    .underline {
+        width: 200px;
+    }
+
+    /* BUTTONS */
+
+    .about-button .btn {
+        font-size: 14px;
+        left: -0.1%;
+    }
+    .contact-button .btn {
+        font-size: 14px;
+    }
+    .skills-button .btn {
+        font-size: 14px;
+        left: 0.1%;
+    }
+    .projects-button .btn {
+        font-size: 14px;
+        left: -1.3%;
+    }
+
+    /* PROJECTS SECTION */
+
+    .overlay-projects {
+        left: 17%;
+        margin-top: 6%;
+    }
+
+    .overlay-projects img {
+        width: 80%;
+    }
+
+    /* SKILLS SECTION */
+
+    .overlay-skills {
+        margin-top: 5%;
+    }
+
+    .container img {
+        width: 50%;
+        margin-left: 25%;
+    }
+
+    /* CONTACT SECTION */
+
+    .overlay-contact {
+        width: 80%;
+        margin-top: 0%;
+        margin-left: 10%;
+    }
+
+}
+
+/* SMALL DEVICES, TABLETS */
+
+@media only screen and ( min-width: 768px) {
+    .container {
+        width: 100%;
+    }
+    /* HEADER */
+
+    header {
+        top: 5%;
+        left: 30%;
+    }
+    .ime h1 {
+        font-size: 50px;
+        width: 240px;
+    }
+    .ime h2 {
+        font-size: 25px;
+        letter-spacing: 1px;
+        width: 240px;
+    }
+
+    .underline {
+        width: 240px;
+    }
+
+
+     /* BUTTONS */
+
+    .about-button .btn {
+        font-size: 20px;
+        left: -0.5%;
+    }
+    .contact-button .btn {
+        font-size: 20px;
+        left: -1.2%;
+    }
+    .skills-button .btn {
+        font-size: 20px;
+        left: 0.2%;
+    }
+    .projects-button .btn {
+        font-size: 20px;
+        left: -1.2%;
+    }
+
+    /* ABOUT SECTION */
+
+    #overlay-about h2 {
+        font-size: 40px;
+    }
+
+    #overlay-about p {
+        font-size: 20px;
+        line-height: 1.5;
+        letter-spacing: 1.3px;
+        margin-top: 35px;
+    }
+
+    /* PROJECTS SECTION */
+
+    .projects h2 {
+        font-size: 40px;
+        margin-top: 35px;
+    }
+
+    .projects p {
+        font-size: 16px;
+    }
+
+    /* SKILLS SECTION */
+
+    .skills h2 {
+        font-size: 40px;
+        margin-top: 35px;
+    }
+
+    .container img {
+        width: 30%;
+        margin-left: 35%;
+    }
+
+    /* CONTACT SECTION */
+
+    .contact h2 {
+        font-size: 40px;
+        margin-top: 35px;
+    }
+
+    .overlay-contact {
+        width: 90%;
+        margin-top: 25%;
+        margin-left: 5%;
+    }
+
+    label {
+        font-size: 20px;
+    }
+
+    #contact-btn {
+        font-size: 20px;
+    }
+}
+
+/* MEDIUM DEVICES, DESKTOPS */
+
+@media only screen and (min-width: 992px) {
+
+    /* HEADER */
+
+    .ime h1 {
+        font-size: 55px;
+        width: 310px;
+    }
+
+    .ime h2 {
+        font-size: 35px;
+        letter-spacing: 1px;
+        width: 310px;
+    }
+
+    .underline {
+        width: 310px;
+    }
+
+    /* BUTTONS */
+
+    .about-button .btn {
+        font-size: 22px;
+        left: -0.3%;
+    }
+    .contact-button .btn {
+        font-size: 22px;
+        left: -0.6%;
+    }
+    .skills-button .btn {
+        font-size: 22px;
+        left: 0.5%;
+    }
+    .projects-button .btn {
+        font-size: 22px;
+        left: -1.1%;
+    }
+
+     /* ABOUT SECTION */
+
+    #overlay-about h2 {
+        font-size: 50px;
+        margin-bottom: 10%;
+    }
+
+      /* PROJECTS SECTION */
+
+    .projects h2 {
+        font-size: 50px;
+    }
+
+    /* SKILLS SECTION */
+
+    .skills h2 {
+        font-size: 50px;
+    }
+
+    /* SKILLS IMAGES */
+    .container img {
+        width: 35%;
+        margin-left: 32%;
+    }
+
+    /* CONTACT SECTION */
+
+    .contact h2 {
+        font-size: 50px;
+    }
+
+    .overlay-contact {
+        margin-top: 13%;
+    }
+
+    /* FORM */
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-control {
+        height: 45px;
+    }
+
+    #contact-btn {
+        font-size: 25px;
+    }
+
+}
+
+/* LARGE DEVICES, WIDESCREEN */
+
+@media only screen and (min-width: 1200px) {
+    /* HEADER */
+
+    header {
+        left: 50%;
+    }
+
+    .underline {
+        width: 310px;
+    }
+
+    /* BUTTONS */
+
+    .about-button .btn {
+        font-size: 22px;
+        left: -0.1%;
+    }
+    .contact-button .btn {
+        font-size: 22px;
+        left: -0.6%;
+    }
+    .skills-button .btn {
+        font-size: 22px;
+        left: 0%;
+    }
+    .projects-button .btn {
+        font-size: 22px;
+        left: -0.8%;
+    }
+
+    /* ABOUT SECTION */
+    #overlay-about {
+        width: 50%;
+        margin-bottom: 10%;
+        left: 25%;
+    }
+
+    #overlay-about h2::after {
+        width: 300px;
+        margin-top: 10px;
+    }
+
+    /* PROJECTS SECTION */
+
+    .overlay-projects img {
+        width: 60%;
+        margin-left: 10%;
+    }
+
+    .projects p {
+        font-size: 18px;
+    }
+
+    /* SKILLS SECTION */
+
+    .container img {
+        width: 90%;
+        margin-left: 20%;
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        -webkit-transition: -webkit-filter 0.3s ease-in-out;
+        transition: -webkit-filter 0.3s ease-in-out;
+        transition: filter 0.3s ease-in-out;
+        transition: filter 0.3s ease-in-out, -webkit-filter 0.3s ease-in-out;
+    }
+
+    .container img:hover,
+    .container img:active {
+        -webkit-filter: grayscale(0%);
+        filter: grayscale(0%);
+    }
+
+    .overlay-skills .inline {
+        width: 14%;
+        display: inline-block;
+    }
+
+    .skills p {
+        font-size: 18px;
+    }
+
+    /* CONTACT SECTION */
+
+    .overlay-contact {
+        width: 80%;
+        margin-left: 10%;
+        margin-top: 5%;
+    }
+
+    #contact-btn:hover,
+    #contact-btn:active {
+        -webkit-box-shadow: 1px 1px 10px #27ae60;
+        box-shadow: 1px 1px 10px #27ae60;
+    }
+
+    .contact p {
+        font-size: 18px;
+    }
+
+    
+
+
+
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Nejc Bauer</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Nejc Bauer Portfolio Page">
+        <link href="img/comp-favicon.ico" rel="icon" type="image/x-icon">
+        <meta property="og:title" content="Nejc Bauer">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://bauernejc.github.io/portfolio/">
+        <meta property="og:image" content="https://bauernejc.github.io/portfolio/img/body-background.jpg">
+        <meta property="og:description" content="Hi! My name is Nejc and i'm a web developer from Ljubljana, Slovenia.">
+
+        <!-- BOOTSTRAP -->
+
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- FONTS -->
+
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet">
+
+        <!-- CSS -->
+
+        <link rel="stylesheet" type="text/css" href="css/animate.css">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="container ime animated">
+                <h1 id="name"></h1>
+                <hr class="underline">
+                <h2 id="naziv"></h2>
+            </div>
+        </header>
+
+        <!-- ABOUT ME BUTTON -->
+        <div class="container-fluid about-button">
+            <button id="about" class="btn btn-danger animated">About</button>
+        </div>
+
+        <!-- PROJECTS BUTTON -->
+        <div class="container-fluid projects-button">
+            <button id="projects" class="btn btn-danger animated">Projects</button>
+        </div>
+
+        <!-- SKILLS BUTTON -->
+        <div class="container-fluid skills-button">
+            <button id="skills" class="btn btn-danger animated">Skills</button>
+        </div>
+
+        <!-- CONTACT BUTTON -->
+        <div class="container-fluid contact-button">
+            <button id="contact" class="btn btn-danger animated">Contact</button>
+        </div>
+
+
+
+        <section class="about-me animated">
+            <div class="row">
+                <div class="container animated col-md-6" id="overlay-about">
+                    <h2 class="animated">Hi there!</h2>
+                    <p class="animated">My name is Nejc and I'm a self-taught web developer from Slovenia.<br>
+                    <br>
+                    I started learning about web development in 2016, and been hooked ever since. I enjoy solving problems, learning about new technologies and just experimenting with the code in front of me.<br>
+                    <br>
+                    When I'm not staring at the screen, I mostly spend time with my girlfriend and our cats Loki & Thor. I also enjoy climbing, hiking, swimming or just going out for a beer with my friends.
+                    </p>
+                </div>
+                <div class="container animated col-md-6" id="image">
+                </div>
+            </div>
+        </section>
+
+        <section class="projects animated">
+            <h2>Projects</h2>
+            <p>Below you will find my hobby projects!<br>
+            They're mostly the result of my learning and experimenting.<br>
+            Click on an image to view the webpage in a new tab!</p>
+            <div class="row">
+                <div class="container-fluid overlay-projects animated">
+                    <a href="https://bauernejc.github.io/" target="_blank"><img src="img/hiker.jpg" alt="image-of-webpage" class="animated projects-img"><img></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills animated">
+           <h2>Skills</h2>
+           <p>I've mostly built websites with <span>HTML</span>, <span>CSS</span> and <span>Javascript</span> and I know how to use frameworks and libraries like <span>Bootstrap</span> and <span>JQuery</span>.<br>
+
+            For back-end and connecting to databases, I mostly used <span>Node.js</span> and <span>MongoDB</span> with Mongoose, but i also know some <span>basic PHP</span>.<br>
+
+            Right now I'm starting my journey into frameworks like Angular, and I also want to learn a CMS like Drupal or Wordpress. </p>
+            <div class="row">
+                <div class="container overlay-skills animated">
+                     
+                    <div class="container animated inline">
+                        <img src="img/html5.jpg" alt="html5-logo" class="animated skill-img html">
+                    </div>
+                    <div class="container animated inline">
+                        <img src="img/css3.jpg" alt="css3-logo" class="animated skill-img css">
+                    </div>
+                    <div class="container animated inline">
+                        <img src="img/javascript.jpg" alt="javascript-logo" class="animated skill-img js">
+                    </div>
+                    <div class="container animated inline">
+                        <img src="img/jquery.jpg" alt="jquery-logo" class="animated skill-img jquery">
+                    </div>
+                    <div class="container animated inline">
+                        <img src="img/nodejs.jpg" alt="nodejs-logo" class="animated skill-img node">
+                    </div>
+                    <div class="container animated inline">
+                        <img src="img/php.svg" alt="php-logo" class="animated skill-img php">
+                    </div>
+                    <div class="container animated inline">
+                        <img src="img/mongodb.jpg" alt="mongodb-logo" class="animated skill-img mongo">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact animated">
+            <h2>Contact</h2>
+            <p>I'm ready for new challenges and highly motivated to <span>learn new things</span>.<br>
+            Feel free to contact me directly by email: <a  class="mail" href="mailto:nejc.bauer@gmail.com"><span>nejc.bauer@gmail.com</span></a><br>
+            Have a nice day! </p>
+            <!--
+            <form class="form animated">
+                <div class="overlay-contact">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" placeholder="Email" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" name="name" placeholder="Name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea rows="4" class="form-control"></textarea>
+                    </div>
+                    <div class="div-btn">
+                        <button class="btn btn-default" id="contact-btn" type="submit">Send</button>
+                    </div>
+                </div>
+            </form>-->
+        </section>
+
+
+    
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.typeit/4.4.0/typeit.min.js"></script>
+  <script src="js/script.js"></script>
+
+    
+    </body>
+</html>
