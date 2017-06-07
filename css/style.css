@@ -8,7 +8,7 @@
 html,
 body {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     overflow: hidden;
 }
 
@@ -39,6 +39,7 @@ body {
     background-position: center;
     background-attachment: fixed;
     background-position-x: 0px;
+    height: 100vh;
 }
 
 header {
