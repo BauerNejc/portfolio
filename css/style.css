@@ -97,7 +97,11 @@ header {
     height: 45px;
     position: fixed;
     transform-origin: top left;
-    transform: rotate(270deg) translateX(-100%)
+    transform: rotate(270deg) translateX(-100%);
+    -webkit-transform: rotate(270deg) translateX(-100%);
+    -moz-transform: rotate(270deg) translateX(-100%);
+    -ms-transform: rotate(270deg) translateX(-100%);
+    -o-transform: rotate(270deg) translateX(-100%);
 }
 
 .main-nav {
