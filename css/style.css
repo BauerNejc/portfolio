@@ -185,7 +185,6 @@ header {
     opacity: 0;
     overflow: auto;
     z-index: 9999;
-    overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
 }
 
