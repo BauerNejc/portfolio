@@ -35,27 +35,17 @@
             </div>
         </header>
 
-        <!-- ABOUT ME BUTTON -->
-        <div class="container-fluid about-button">
-            <button id="about" class="btn btn-danger animated">About</button>
-        </div>
-
-        <!-- PROJECTS BUTTON -->
-        <div class="container-fluid projects-button">
-            <button id="projects" class="btn btn-danger animated">Projects</button>
-        </div>
-
-        <!-- SKILLS BUTTON -->
-        <div class="container-fluid skills-button">
-            <button id="skills" class="btn btn-danger animated">Skills</button>
-        </div>
-
-        <!-- CONTACT BUTTON -->
-        <div class="container-fluid contact-button">
-            <button id="contact" class="btn btn-danger animated">Contact</button>
-        </div>
-
-
+        <nav class="navbar navbar-default">
+            <div class="container-fluid main-nav">
+                <ul class="nav navbar-nav">
+                    <li><a class="buttons" id="About-btn" href="#">About</a></li>
+                    <li><a class="buttons" id="Projects-btn" href="#">Projects</a></li>
+                    <li><a class="buttons" id="Skills-btn" href="#">Skills</a></li>
+                    <li><a class="buttons" id="Contact-btn" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    
 
         <section class="about-me animated">
             <div class="row">
@@ -123,8 +113,9 @@
         <section class="contact animated">
             <h2>Contact</h2>
             <p>I'm ready for new challenges and highly motivated to <span>learn new things</span>.<br>
-            Feel free to contact me directly by email: <a  class="mail" href="mailto:nejc.bauer@gmail.com"><span>nejc.bauer@gmail.com</span></a><br>
+            Feel free to contact me directly by email: <span> nejc.bauer@gmail.com</span><br>
             Have a nice day! </p>
+            <a type="button" href="mailto:nejc.bauer@gmail.com" class="btn btn-default">Contact</a>
             <!--
             <form class="form animated">
                 <div class="overlay-contact">

@@ -27,10 +27,10 @@ $(document).ready(function(){
 
     //ANIMATIONS ON PAGE LOAD
 
-    $(".about-button .btn").animate({opacity: 1}, 2500);
-    $(".projects-button .btn").animate({opacity: 1}, 3000);
-    $(".skills-button .btn").animate({opacity: 1}, 3500);
-    $(".contact-button .btn").animate({opacity: 1}, 4000);
+    $("#About-btn").animate({opacity: 1}, 3000);
+    $("#Projects-btn").animate({opacity: 1}, 3500);
+    $("#Skills-btn").animate({opacity: 1}, 4000);
+    $("#Contact-btn").animate({opacity: 1}, 4500);
     $(".underline").delay(1000).animate({opacity: 1}, 2000);
           
 
@@ -58,7 +58,7 @@ $(document).ready(function(){
 
     //ANIMATIONS ABOUT BUTTON
 
-    $(".about-button").on("click", function(){
+    $("#About-btn").on("click", function(){
 
         animate(about, "fadeIn", "fadeOut");
         animate(name, "fadeOutUp", "fadeInDown");
@@ -66,10 +66,10 @@ $(document).ready(function(){
         animate(aboutParagraph, "fadeInUp", "fadeOutDown");
 
         //Change text when clicked
-        changeText("#about", "About");
+        changeText("#About-btn", "About");
 
         //hide other buttons when clicked
-        $("#projects, #contact, #skills").fadeToggle();
+        $("#Projects-btn, #Contact-btn, #Skills-btn").fadeToggle();
 
         //Put content infront..change z-index
         $(about).toggleClass("visible");
@@ -78,7 +78,7 @@ $(document).ready(function(){
 
     //ANIMATIONS PROJECTS BUTTON
 
-    $(".projects-button").on("click", function(){
+    $("#Projects-btn").on("click", function(){
 
         animate(projects, "fadeIn", "fadeOut");
         animate(name, "fadeOutUp", "fadeInDown");
@@ -86,10 +86,10 @@ $(document).ready(function(){
         animate(projectsTitle, "fadeIn", "fadeOut");
    
         //change text when clicked
-        changeText("#projects", "Projects");
+        changeText("#Projects-btn", "Projects");
 
         //hide other buttons when clicked
-        $("#about, #contact, #skills").fadeToggle();
+        $("#About-btn, #Contact-btn, #Skills-btn").fadeToggle();
 
         //Put content infront..change z-index
         $(projects).toggleClass("visible");
@@ -99,17 +99,17 @@ $(document).ready(function(){
 
     //ANIMATIONS SKILLS BUTTON
 
-    $(".skills-button").on("click", function(){
+    $("#Skills-btn").on("click", function(){
         
         animate(skills, "fadeIn", "fadeOut");
         animate(name, "fadeOutUp", "fadeInDown");
         animate(skillsImg, "fadeInUp", "fadeOutDown");
 
         //hide other buttons when clicked
-        $("#about, #contact, #projects").fadeToggle();
+        $("#About-btn, #Contact-btn, #Projects-btn").fadeToggle();
 
         //change text when clicked
-        changeText("#skills", "Skills");
+        changeText("#Skills-btn", "Skills");
 
 
         //Put contect infront..change z-index
@@ -120,17 +120,17 @@ $(document).ready(function(){
       
       //ANIMATIONS CONTACT BUTTON
 
-      $(".contact-button").on("click", function(){
+      $("#Contact-btn").on("click", function(){
 
         animate(contact, "fadeIn", "fadeOut");
         animate(contactForm, "fadeInUp", "fadeOutDown");
         animate(name, "fadeOutUp", "fadeInDown");
 
         //hide other buttons when clicked
-        $("#about, #skills, #projects").fadeToggle();
+        $("#About-btn, #Skills-btn, #Projects-btn").fadeToggle();
 
         //change text when clicked
-        changeText("#contact", "Contact");
+        changeText("#Contact-btn", "Contact");
 
         //Put contect infront..change z-index
         $(contact).toggleClass("visible");
