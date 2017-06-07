@@ -142,28 +142,28 @@ header {
     position: fixed;
     z-index: 10000;
     top: 5%;
-    left: 15%;
+    left: 17%;
 }
 
 #Projects-btn {
     position: fixed;
     z-index: 10000;
     top: 5%;
-    left: 35%;
+    left: 37%;
 }
 
 #Skills-btn {
     position: fixed;
     z-index: 10000;
     top: 5%;
-    left: 55%;
+    left: 57%;
 }
 
 #Contact-btn {
     position: fixed;
     z-index: 10000;
     top: 5%;
-    left: 75%;
+    left: 77%;
 }
 
 
